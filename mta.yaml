@@ -3,14 +3,26 @@ _schema-version: '2.1'
 version: 0.0.1
 
 modules:
- - name: SAPFI
+ 
+
+
+ - name: HDB
    type: hdb
-   path: Training/SAPFI
+   path: HDB
    requires:
-    - name: hdi_SAPFI
+    - name: hdi_HDB
 
 resources:
  - name: hdi_SAPFI
    properties:
       hdi-container-name: ${service-name}
    type: com.sap.xs.hdi-container
+
+ - name: hdi_HDB
+   parameters:
+      config:
+         schema: HDB
+   properties:
+      hdi-container-name_2: ${service-name}
+   type: com.sap.xs.hdi-container
+
