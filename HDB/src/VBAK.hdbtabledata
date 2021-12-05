@@ -1,0 +1,44 @@
+{
+    "format_version": 1,
+    "imports": [
+        {
+            "target_table": "Development.HDB::VBAK",
+            "source_data": {
+                "data_type": "CSV",
+                "file_name": "Development.HDB::VBAK.csv",
+                "has_header": true,
+		"dialect": "HANA",
+		"type_config": {
+		"delimiter": ","
+		}
+            },
+            "import_settings": {
+                "import_columns": [
+                        "MANDT",	
+   			"VBELN",     	
+   			"AUDAT",   	
+   			"VBTYP",	
+   			"NETWR",	
+   			"WAERK",	
+   			"VKORG",	
+   			"VTWEG",	
+   			"SPART",	
+   			"KNUMV",    	
+   			"VDATU"
+                ]},
+               "column_mappings":{
+			 "MANDT": 1,	
+   			"VBELN": 2,     	
+   			"AUDAT": 3,   	
+   			"VBTYP": 4,	
+   			"NETWR": 5,	
+   			"WAERK": 6,	
+   			"VKORG": 7,	
+   			"VTWEG": 8,	
+   			"SPART": 9,	
+   			"KNUMV": 10,    	
+   			"VDATU": 11
+            }
+        }
+    ]
+}

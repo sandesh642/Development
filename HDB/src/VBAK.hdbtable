@@ -1,0 +1,14 @@
+COLUMN TABLE "Development.HDB::VBAK"
+(
+   "MANDT" VARCHAR (03),	
+   "VBELN" VARCHAR (10),     	
+   "AUDAT" VARCHAR (08),   	
+   "VBTYP" VARCHAR (10),	
+   "NETWR" DECIMAL (23,2),	
+   "WAERK" VARCHAR (10),	
+   "VKORG" VARCHAR (04),	
+   "VTWEG" VARCHAR (02),	
+   "SPART" VARCHAR (02),	
+   "KNUMV" VARCHAR (10),    	
+   "VDATU" VARCHAR (08)   
+)
