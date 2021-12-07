@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="Development.HDB::ZCAL_DEMO" applyPrivilegeType="NONE" dataCategory="CUBE" schemaVersion="3.0" outputViewType="Aggregation" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="Demo Calculation view "/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="Development.HDB::VBAK">
+    <resourceUri>Development.HDB::VBAK</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1">
+    <viewAttributes>
+      <viewAttribute id="KNUMV"/>
+      <viewAttribute id="MANDT"/>
+      <viewAttribute id="VBELN"/>
+      <viewAttribute id="AUDAT"/>
+      <viewAttribute id="VBTYP"/>
+      <viewAttribute id="NETWR"/>
+      <viewAttribute id="WAERK"/>
+      <viewAttribute id="VKORG"/>
+      <viewAttribute id="VTWEG"/>
+      <viewAttribute id="SPART"/>
+      <viewAttribute id="VDATU"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <restrictedViewAttributes/>
+    <input node="Development.HDB::VBAK">
+      <mapping xsi:type="Calculation:AttributeMapping" target="KNUMV" source="KNUMV"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VBELN" source="VBELN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="AUDAT" source="AUDAT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VBTYP" source="VBTYP"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="NETWR" source="NETWR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="WAERK" source="WAERK"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VKORG" source="VKORG"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VTWEG" source="VTWEG"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SPART" source="SPART"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VDATU" source="VDATU"/>
+    </input>
+  </calculationView>
+</calculationViews>
+<logicalModel id="Projection_1">
+  <attributes>
+    <attribute id="KNUMV" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="KNUMV"/>
+      <keyMapping columnObjectName="Projection_1" columnName="KNUMV"/>
+    </attribute>
+    <attribute id="MANDT" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MANDT"/>
+      <keyMapping columnObjectName="Projection_1" columnName="MANDT"/>
+    </attribute>
+    <attribute id="VBELN" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="VBELN"/>
+      <keyMapping columnObjectName="Projection_1" columnName="VBELN"/>
+    </attribute>
+    <attribute id="AUDAT" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="AUDAT"/>
+      <keyMapping columnObjectName="Projection_1" columnName="AUDAT"/>
+    </attribute>
+    <attribute id="VBTYP" order="5" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="VBTYP"/>
+      <keyMapping columnObjectName="Projection_1" columnName="VBTYP"/>
+    </attribute>
+    <attribute id="WAERK" order="7" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="WAERK"/>
+      <keyMapping columnObjectName="Projection_1" columnName="WAERK"/>
+    </attribute>
+    <attribute id="VKORG" order="8" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="VKORG"/>
+      <keyMapping columnObjectName="Projection_1" columnName="VKORG"/>
+    </attribute>
+    <attribute id="VTWEG" order="9" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="VTWEG"/>
+      <keyMapping columnObjectName="Projection_1" columnName="VTWEG"/>
+    </attribute>
+    <attribute id="SPART" order="10" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SPART"/>
+      <keyMapping columnObjectName="Projection_1" columnName="SPART"/>
+    </attribute>
+    <attribute id="VDATU" order="11" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="VDATU"/>
+      <keyMapping columnObjectName="Projection_1" columnName="VDATU"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures>
+    <measure id="NETWR" order="6" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="NETWR"/>
+      <measureMapping columnObjectName="Projection_1" columnName="NETWR"/>
+    </measure>
+  </baseMeasures>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+  <localDimensions/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+  
+    <shape expanded="true" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="100" y="191"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>
