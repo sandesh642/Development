@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="Development.HDB::CAL_Annonym_Test" applyPrivilegeType="NONE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="3.0" outputViewType="Projection" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="CAL_Annonym_Test"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="Development.HDB::Annonym_Data">
+    <resourceUri>Development.HDB::Annonym_Data</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:AnonymizeView" id="Anonymize_1" method="kAnonymity">
+    <viewAttributes>
+      <viewAttribute id="ID"/>
+      <viewAttribute id="SITE"/>
+      <viewAttribute id="GENDER"/>
+      <viewAttribute id="AGE"/>
+      <viewAttribute id="SCORE"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <restrictedViewAttributes/>
+    <input node="Development.HDB::Annonym_Data">
+      <mapping xsi:type="Calculation:AttributeMapping" target="ID" source="ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SITE" source="SITE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="GENDER" source="GENDER"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="AGE" source="AGE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SCORE" source="SCORE"/>
+    </input>
+    <anonymizeParameterization>
+      <seqColumn>ID</seqColumn>
+      <k>3</k>
+      <qidColumn id="GENDER"/>
+      <qidColumn id="AGE"/>
+      <qidColumn id="SCORE"/>
+      <qidColumnHierarchy id="GENDER">
+        <hierarchyEmbeded>Male;M;*Female;F;*</hierarchyEmbeded>
+      </qidColumnHierarchy>
+      <qidColumnHierarchy id="AGE">
+        <hierarchyEmbeded>19;Y;*18;Y;*24;A;*21;A;*23;A;*</hierarchyEmbeded>
+      </qidColumnHierarchy>
+      <qidColumnHierarchy id="SCORE">
+        <hierarchyEmbeded>80;FC;*79;SC;*98;FC;*81;FC;*85;FC;*90;FC;*75;SC;*91;FC;*65;SC;*95;FC;*</hierarchyEmbeded>
+      </qidColumnHierarchy>
+    </anonymizeParameterization>
+  </calculationView>
+</calculationViews>
+<logicalModel id="Anonymize_1">
+  <attributes>
+    <attribute id="ID" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ID"/>
+      <keyMapping columnObjectName="Anonymize_1" columnName="ID"/>
+    </attribute>
+    <attribute id="SITE" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SITE"/>
+      <keyMapping columnObjectName="Anonymize_1" columnName="SITE"/>
+    </attribute>
+    <attribute id="GENDER" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="GENDER"/>
+      <keyMapping columnObjectName="Anonymize_1" columnName="GENDER"/>
+    </attribute>
+    <attribute id="AGE" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="AGE"/>
+      <keyMapping columnObjectName="Anonymize_1" columnName="AGE"/>
+    </attribute>
+    <attribute id="SCORE" order="5" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SCORE"/>
+      <keyMapping columnObjectName="Anonymize_1" columnName="SCORE"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="92" y="112"/>
+    
+      <rectangleSize width="160"/>
+    </shape>
+  
+    <shape expanded="true" modelObjectName="Anonymize_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="92" y="239"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

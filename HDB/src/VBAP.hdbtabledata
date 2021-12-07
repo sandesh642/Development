@@ -1,0 +1,50 @@
+{
+    "format_version": 1,
+    "imports": [
+        {
+            "target_table": "Development.HDB::VBAP",
+            "source_data": {
+                "data_type": "CSV",
+                "file_name": "Development.HDB::VBAP.csv",
+                "has_header": true,
+		"dialect": "HANA",
+		"type_config": {
+		"delimiter": ","
+		}
+            },
+            "import_settings": {
+                "import_columns": [
+                        "MANDT",	
+   			"VBELN",     	
+   			"POSNR",   	
+   			"MATNR",	
+   			"MATKL",	
+   			"ARKTX",	
+   			"PSTYV",	
+   			"ABGRU",	
+   			"MEINS",	
+   			"NETWR",
+    			"WAERK",
+			"KWMENG",
+			"WERKS",
+   			"NETPR"
+                ]},
+               "column_mappings":{
+ 			"MANDT": 1,	
+   			"VBELN": 2,     	
+   			"POSNR": 3,   	
+   			"MATNR": 4,	
+   			"MATKL": 5,	
+   			"ARKTX": 6,	
+   			"PSTYV": 7,	
+   			"ABGRU": 8,	
+   			"MEINS": 9,	
+   			"NETWR": 10,
+    			"WAERK": 11,
+			"KWMENG": 12,
+			"WERKS": 13,
+   			"NETPR": 14
+            }
+        }
+    ]
+}

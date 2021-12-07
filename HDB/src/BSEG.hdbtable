@@ -1,0 +1,11 @@
+COLUMN TABLE "Development.HDB::BSEG" 
+(
+   "MANDT" VARCHAR (03),	
+   "BUKRS" VARCHAR (04),     	
+   "BELNR" VARCHAR (10),   	
+   "GJAHR" VARCHAR (04),	
+   "BUZEI" VARCHAR (03),	
+   "KOART" VARCHAR (06),	
+   "DMBTR" DECIMAL (23,2),	
+   "HKONT" VARCHAR (10)   
+)

@@ -1,0 +1,8 @@
+COLUMN TABLE "Development.HDB::Annonym_Data" 
+(
+   "ID" INT,	
+   "SITE" VARCHAR (06),     	
+   "GENDER" VARCHAR (10),   	
+   "AGE" VARCHAR (04),	
+   "SCORE" VARCHAR (03)	   
+)

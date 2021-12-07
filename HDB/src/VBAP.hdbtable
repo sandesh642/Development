@@ -1,0 +1,17 @@
+COLUMN TABLE "Development.HDB::VBAP" 
+(
+   "MANDT" VARCHAR (03),	
+   "VBELN" VARCHAR (10),     	
+   "POSNR" VARCHAR (06),   	
+   "MATNR" VARCHAR (40),	
+   "MATKL" VARCHAR (9),	
+   "ARKTX" VARCHAR (40),	
+   "PSTYV" VARCHAR (10),	
+   "ABGRU" VARCHAR (10),	
+   "MEINS" VARCHAR (10),	
+   "NETWR" DECIMAL (23,2),    	
+   "WAERK" VARCHAR (06),
+   "KWMENG" DECIMAL (23,2), 
+   "WERKS" VARCHAR (06), 
+   "NETPR" DECIMAL (23,2)
+)
